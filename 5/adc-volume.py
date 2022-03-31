@@ -34,7 +34,7 @@ def d2b(value):
     return [int(bit) for bit in bin(value)[2:].zfill(8)]
 
 def transform(digit):
-    return (1 << int(digit * BITS / LEVELS)) - 1
+    return (1 << round(digit * BITS / LEVELS)) - 1
 
 def adc_sar():
     value = 0
